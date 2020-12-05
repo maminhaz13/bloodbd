@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//HomeController routes
+//Home Controller routes
 Route::get('/', 'HomeController@index')->name('dashboard')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
+
+//Bloodgroup Controller routes
+Route::resource('admin/bloodgroup', 'BloodgroupController', [
+    'as' => 'bloodgroup'
+])->middleware('auth');
+
 

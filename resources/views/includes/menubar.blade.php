@@ -25,15 +25,15 @@
                             </ul>
                         </li>
 
-                        <li class="droplink">
-                            <a href="#">
+                        <li class="droplink @yield('bloodgroup_active')">
+                            <a href="{{ route('bloodgroup.bloodgroup.index') }}">
                                 <span class="menu-icon icon-grid"></span>
                                 <p>Blood group manager</p>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="table-data.html">Add new blood Group</a></li>
-                                <li><a href="table-data.html">All blood Group</a></li>
+                                <li><a href="{{ route('bloodgroup.bloodgroup.create') }}">Add new blood Group</a></li>
+                                <li><a href="{{ route('bloodgroup.bloodgroup.index') }}">All blood Group</a></li>
                             </ul>
                         </li>
 
